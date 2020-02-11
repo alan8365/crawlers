@@ -1,0 +1,53 @@
+{
+    "course_info": {
+        "lesson_number": "1",
+        "chapter": "4",
+        "name": " 轉換資料型態"
+    },
+    "all_block": [
+        {
+            "type": "text",
+            "content": " "
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>自動轉換</h5>"
+        },
+        {
+            "type": "text",
+            "content": " "
+        },
+        {
+            "type": "text",
+            "content": "當整數和浮點數進行運算時，Python會將整數轉換為浮點數，浮點數與浮點數的運算結果也會是浮點數。 "
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> sum = 5 + 6.2 \n>>> sum \n11.2 \n```"
+        },
+        {
+            "type": "text",
+            "content": "當布林值作算術運算時，Python會將布林值轉換為整數，True為1，False為0。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> True + True \n2 \n>>> True + False\n1\n```"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>使用轉換函式</h5>"
+        },
+        {
+            "type": "text",
+            "content": "我們也可以強制轉換變數的資料型態："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> float(123) #將整數123轉換為浮點數\n123.0\n>>> str(123) #將整數123轉換為字串\n'123'\n>>> int(12.34567) #將浮點數12.34567轉換為整數\n12\n>>> int(True) #將布林值True轉換為整數\n1\n>>> bool(0) #將整數0轉換為布林值\nFalse\n>>> bool(1) #將整數1轉換為布林值\nTrue\n>>> bool(None) #將空型態None轉換為布林值\nFalse\n```"
+        },
+        {
+            "type": "text",
+            "content": "其他參見<a href='http://easycoding.nutc.edu.tw/wiki/3/1'>文件：轉換函式</a>"
+        }
+    ]
+}

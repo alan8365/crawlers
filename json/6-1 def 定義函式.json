@@ -1,0 +1,117 @@
+{
+    "course_info": {
+        "lesson_number": "6",
+        "chapter": "1",
+        "name": " def 定義函式"
+    },
+    "all_block": [
+        {
+            "type": "text",
+            "content": "###### tags: `easy coding`"
+        },
+        {
+            "type": "text",
+            "content": "當你發現你要寫的某段程式碼之前已經寫過了而且功能都一樣，並且不只用到一遍時，你可以使用函式把他們裝起來，有需要時再叫出來用就好。這樣可以使程式的重複性沒那麼高，當後來有需要修改時也不用一個一個去翻，可以直接改寫他們共同使用的函式。"
+        },
+        {
+            "type": "text",
+            "content": "##### 簡寫用函式"
+        },
+        {
+            "type": "text",
+            "content": "在python中定義單純簡寫程式碼的函式要透過以下語法："
+        },
+        {
+            "type": "code",
+            "content": "```\ndef 函式名稱():\n    程式碼們...\n```"
+        },
+        {
+            "type": "text",
+            "content": "首先是用def來告訴程式我要定義函式了，接著是我們在用到函式時要用的函式名稱，後面接上一個小括號告訴程式說這個函式沒有參數(下段的重點噢!)，最後在縮排後放上用到函式時會執行的程式碼。"
+        },
+        {
+            "type": "text",
+            "content": "下面我們來做一個會在螢幕上輸出easy coding的函式。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> def hello():\n...     print(\"easy coding\")\n>>> hello()\neasy coding\n```"
+        },
+        {
+            "type": "text",
+            "content": "我們可以看到這種函式只是讓hello()執行print(\"easy coding\")而已，但是我們通常會在小括號裡加上參數讓函式變得更有彈性可以做更多事。"
+        },
+        {
+            "type": "text",
+            "content": "##### 輸入參數"
+        },
+        {
+            "type": "text",
+            "content": "有參數的函式可以透過以下語法定義："
+        },
+        {
+            "type": "code",
+            "content": "```\ndef 函式名稱(參數1,參數2,...):\n    程式碼們...\n```"
+        },
+        {
+            "type": "text",
+            "content": "當你要用到一個有參數的函式時記得要填入與定義時同樣數量的參數，否則會出錯噢。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> def hello(a):\n...     print(a)\n>>> hello(3)\n3\n>>> hello()\nTraceback (most recent call last):\n  File \"<stdin>\", line 1, in <module>\nTypeError: hello() missing 1 required positional argument: 'a'\n# 錯誤:hello()函式少了1個參數\n```"
+        },
+        {
+            "type": "text",
+            "content": "當然參數可以傳不只一個進去。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> def hello(a,b):\n...     print(a)\n...     print(b)\n>>> hello(2,3)\n2\n3\n>>> hello(3,2)\n3\n2\n```"
+        },
+        {
+            "type": "text",
+            "content": "這邊我們可以看到輸入時參數的位置會直接影響到程式碼的執行，所以我們把這種參數叫做位置參數(positional argument)，在6-2會提到參數的其他類型。"
+        },
+        {
+            "type": "text",
+            "content": "如果你不喜歡被位置束縛那你也可以直接用關鍵字(keyword)來指定哪個變數給哪個參數。"
+        },
+        {
+            "type": "code",
+            "content": "```python=+\n>>> hello(b=3, a=2)\n2\n3\n```"
+        },
+        {
+            "type": "text",
+            "content": "##### return 回傳值"
+        },
+        {
+            "type": "text",
+            "content": "當你需要一個函式不只是print出結果給你看而是把它執行完的結果變成一個變數傳給你時就需要用到return了。"
+        },
+        {
+            "type": "text",
+            "content": "return可以加在函式內的任何地方，而函式只要執行到了return就會直接把值傳回來而忽略return下面的其他程式碼。"
+        },
+        {
+            "type": "text",
+            "content": "像是我們來做一個比大小的函式，它會返回兩個值裡較大的那個。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> def max(a, b):\n...     if(a>b):\n...         return a\n...     else:\n...         return b\n...     print(222) #這行不會被執行到\n>>> a = max(3,58)\n>>> a\n58\n```"
+        },
+        {
+            "type": "text",
+            "content": "上面例子中我們可以看到函式內的變數a跟函式外的變數a並不一樣，在函式裡呼叫a會先在函式內找找看有沒有這個變數才會去外面找。"
+        },
+        {
+            "type": "text",
+            "content": "如果没有使用return，則會自動返回空值(None)。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> def hello():\n...     print(\"easy coding\")\n>>> a = hello()\neasy coding\n>>> print(a)\nNone\n```"
+        }
+    ]
+}

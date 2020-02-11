@@ -1,0 +1,81 @@
+{
+    "course_info": {
+        "lesson_number": "5",
+        "chapter": "4",
+        "name": " 巢狀迴圈"
+    },
+    "all_block": [
+        {
+            "type": "text",
+            "content": "<style>"
+        },
+        {
+            "type": "text",
+            "content": "h4{"
+        },
+        {
+            "type": "text",
+            "content": "color:purple"
+        },
+        {
+            "type": "text",
+            "content": "}"
+        },
+        {
+            "type": "text",
+            "content": "h5{"
+        },
+        {
+            "type": "text",
+            "content": "color:darkblue"
+        },
+        {
+            "type": "text",
+            "content": "}"
+        },
+        {
+            "type": "text",
+            "content": "</style>"
+        },
+        {
+            "type": "text",
+            "content": "前面我們介紹了可以幫助我們重複做類似事情的迴圈，而有時候我們會要重複執行類似的迴圈像這樣。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\nfor i in range(0):\n    print(\"*\",sep='',end='')\nprint()\nfor i in range(1):\n    print(\"*\",sep='',end='')\nprint()\nfor i in range(2):\n    print(\"*\",sep='',end='')\nprint()\nfor i in range(3):\n    print(\"*\",sep='',end='')\nprint()\nfor i in range(4):\n    print(\"*\",sep='',end='')\nprint()\n```"
+        },
+        {
+            "type": "text",
+            "content": "輸出結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n*\n**\n***\n****\n```"
+        },
+        {
+            "type": "text",
+            "content": "這時候我們就可以直接在迴圈裡面執行迴圈來達到一樣的效果。"
+        },
+        {
+            "type": "text",
+            "content": "當內圈的範圍條件中有用到外圈的變數時，內圈的次數會受外圈影響"
+        },
+        {
+            "type": "text",
+            "content": "![](https://i.imgur.com/zY26j6g.png)"
+        },
+        {
+            "type": "code",
+            "content": "```python=  \nfor i in range(5):\n    for j in range(i):\n        print(\"*\",sep='',end='')\n    print()\n```"
+        },
+        {
+            "type": "text",
+            "content": "輸出結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n*\n**\n***\n****\n```"
+        }
+    ]
+}

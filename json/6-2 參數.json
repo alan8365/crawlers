@@ -1,0 +1,97 @@
+{
+    "course_info": {
+        "lesson_number": "6",
+        "chapter": "2",
+        "name": " 參數"
+    },
+    "all_block": [
+        {
+            "type": "text",
+            "content": "###### tags: `easy coding`"
+        },
+        {
+            "type": "text",
+            "content": "剛剛上面提到過了位置參數，這課將會提到其他種類的參數。"
+        },
+        {
+            "type": "text",
+            "content": "##### 默認參數(Default Argument)"
+        },
+        {
+            "type": "text",
+            "content": "當我們想要給參數一個默認值的時候我們可以用以下語法給參數加上默認值："
+        },
+        {
+            "type": "code",
+            "content": "```\ndef 函式名稱(位置參數們,默認參數1=默認值,默認參數2=默認值,...):\n    程式碼們...\n```"
+        },
+        {
+            "type": "text",
+            "content": "以下我們做了一個可以計算x的n次方的函式，當n沒有輸入時就回傳平方。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> def power(x, n=2):\n...     s = 1\n...     while n > 0:\n...         n = n - 1\n...         s = s * x\n...     return s\n>>> power(2)\n4\n>>> power(2, 3)\n8\n>>> power(2, n=4)\n16\n```"
+        },
+        {
+            "type": "text",
+            "content": "##### 可變長度參數(Arbitrary Argument)"
+        },
+        {
+            "type": "text",
+            "content": "有時候我們會想要輸入不同數量的參數，這時候可以用以下語法來表示："
+        },
+        {
+            "type": "code",
+            "content": "```\ndef 函式名稱(位置參數們, *可變長度參數, 默認參數們):\n    程式碼們...\n```"
+        },
+        {
+            "type": "text",
+            "content": "接著我們來做一個不論輸入多少參數都會顯示每個參數各自類型的函式"
+        },
+        {
+            "type": "code",
+            "content": "```python=\ndef show_type(*args):\n    for i in args:\n        print(i, \":\", type(i).__name__)\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> show_type(200, 3.5, \"sss\")\n200 : 'int'\n3.5 : 'float'\nsss : 'str'\n```"
+        },
+        {
+            "type": "text",
+            "content": "在參數的前面加上一個\\*會讓參數變成一個串列並把多出來的參數放進去，記得要把帶星號的參數放在位置參數後面噢。"
+        },
+        {
+            "type": "text",
+            "content": "如果我們有一個長度2的串列想要傳到需要2個變數的的函式裡時我們也可以用星號來解開(unpack)那個串列。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\ndef show(a, b):\n    print(a)\n    print(b)\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = [2, 3]\n>>> show(*a) # 這行程式碼跟show(a[0], a[1])是一樣的\n2\n3\n```"
+        },
+        {
+            "type": "text",
+            "content": "接著我們還可以把用關鍵字輸入的參數也變成可變長度的。"
+        },
+        {
+            "type": "code",
+            "content": "```\ndef 函式名稱(位置參數們, *可變長度參數, 默認參數們, **可變長度關鍵字參數):\n    程式碼們...\n```"
+        },
+        {
+            "type": "text",
+            "content": "這邊我們來做一個以參數名稱為學生名稱來算學生成績平均的函式。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\ndef avg(**kwargs):\n    result = 0\n    for i in kwargs:\n        result += kwargs[i]\n        print(i, \":\", kwargs[i])\n    print(\"平均:\", result/len(kwargs))\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> avg(auau=60, bbbb=90, cake=80, dade=50)\nauau : 60\nbbbb : 90\ncake : 80\ndade : 50\n平均: 70.0\n```"
+        }
+    ]
+}

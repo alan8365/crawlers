@@ -1,0 +1,97 @@
+{
+    "course_info": {
+        "lesson_number": "5",
+        "chapter": "5",
+        "name": " pass、break和continue"
+    },
+    "all_block": [
+        {
+            "type": "text",
+            "content": "<style>"
+        },
+        {
+            "type": "text",
+            "content": "h4{"
+        },
+        {
+            "type": "text",
+            "content": "color:purple"
+        },
+        {
+            "type": "text",
+            "content": "}"
+        },
+        {
+            "type": "text",
+            "content": "h5{"
+        },
+        {
+            "type": "text",
+            "content": "color:darkblue"
+        },
+        {
+            "type": "text",
+            "content": "}"
+        },
+        {
+            "type": "text",
+            "content": "</style>"
+        },
+        {
+            "type": "text",
+            "content": "#### U5-5 pass、break和continue"
+        },
+        {
+            "type": "text",
+            "content": "##### pass"
+        },
+        {
+            "type": "text",
+            "content": "pass不做任何事。根據python的語法，有些地方必須放程式碼進去。當你要用卻還不知道該寫什麼時，可以先暫時放上pass，避免發生錯誤。"
+        },
+        {
+            "type": "code",
+            "content": "```python=  \nif True:\n\tpass    # 不做任何事\n```"
+        },
+        {
+            "type": "text",
+            "content": "##### break"
+        },
+        {
+            "type": "text",
+            "content": "使用break強制跳出迴圈，終止當前迴圈的進行。"
+        },
+        {
+            "type": "code",
+            "content": "```python=  \n>>> i = 0\n>>> for i in range(5):\n...     print(i)\n...     i+=1\n...     break   #執行第一遍時就跳出\n... else:       #執行break後不會執行else\n...     print(\"i>=5\")\n...\n0  \n```"
+        },
+        {
+            "type": "text",
+            "content": "break只會跳出當前的迴圈，當迴圈為巢狀時，使用break可能不會使迴圈結束。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> while 1:    #無限迴圈\n...     while 1:        #雙層無限迴圈\n...             print(0)\n...             break   #進來內層迴圈後立刻跳出\n...     print(1)\n...\n0\n1\n0\n1\n0\n1\n0\n1\nTraceback (most recent call last):\n  File \"<stdin>\", line 5, in <module>\nKeyboardInterrupt    #按下中斷鍵停止無限迴圈\n```"
+        },
+        {
+            "type": "text",
+            "content": "##### continue"
+        },
+        {
+            "type": "text",
+            "content": "continue會跳過當前迴圈剩餘的程式碼，執行下一次的迴圈。"
+        },
+        {
+            "type": "code",
+            "content": "```python=  \nfor i in range(10,20):\n    if i%2==0:\n            continue        #當i是偶數時跳過這輪迴圈\n    print(i)    \n```"
+        },
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n11\n13\n15\n17\n19\n```"
+        }
+    ]
+}

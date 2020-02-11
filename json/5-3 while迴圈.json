@@ -1,0 +1,117 @@
+{
+    "course_info": {
+        "lesson_number": "5",
+        "chapter": "3",
+        "name": " while迴圈"
+    },
+    "all_block": [
+        {
+            "type": "text",
+            "content": "<style>"
+        },
+        {
+            "type": "text",
+            "content": "h4{"
+        },
+        {
+            "type": "text",
+            "content": "color:purple"
+        },
+        {
+            "type": "text",
+            "content": "}"
+        },
+        {
+            "type": "text",
+            "content": "h5{"
+        },
+        {
+            "type": "text",
+            "content": "color:darkblue"
+        },
+        {
+            "type": "text",
+            "content": "}"
+        },
+        {
+            "type": "text",
+            "content": "</style>"
+        },
+        {
+            "type": "text",
+            "content": "##### 條件式迴圈"
+        },
+        {
+            "type": "text",
+            "content": "while是條件式迴圈。在每次執行迴圈內的程式碼前，都會先判斷前面的條件式是否成立，若為True就執行一輪程式碼，然後再跳回迴圈頭判斷條件式，直到條件式的結果為False，跳出迴圈，繼續往下執行。"
+        },
+        {
+            "type": "code",
+            "content": "```\nwhile 條件式:\n    迴圈內容\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=  \n>>> i = 0\n>>> while i<5:          #迴圈頭\n...     print (i)       #迴圈內容\n...     i+=1\n...\n0\n1\n2\n3\n4\n```"
+        },
+        {
+            "type": "text",
+            "content": "![](https://i.imgur.com/cb2QCGQ.png)"
+        },
+        {
+            "type": "text",
+            "content": "##### 在條件式不成立後執行"
+        },
+        {
+            "type": "text",
+            "content": "跟for迴圈一樣，使用else可以在while迴圈結束，也就是當條件式的結果為False時執行。"
+        },
+        {
+            "type": "code",
+            "content": "```\nwhile 條件式:\n    迴圈內容\nelse:\n    當條件式不成立時執行的程式\n```"
+        },
+        {
+            "type": "text",
+            "content": "![](https://i.imgur.com/yKUwpab.png)"
+        },
+        {
+            "type": "code",
+            "content": "```python= \n>>> i=0\n>>> while i < 5:\n...     print(i)\n...     i +=1\n... else:\n...     print('結束')\n...\n0\n1\n2\n3\n4\n結束\n```"
+        },
+        {
+            "type": "text",
+            "content": "如果不是因為條件式的結果為False，而是因為遇到break或是其他特殊原因跳出迴圈則else不會執行。"
+        },
+        {
+            "type": "text",
+            "content": "註：break在U5-5會詳細說明。"
+        },
+        {
+            "type": "code",
+            "content": "```python=  \n>>> i = 0\n>>> while i < 5:\n...     print (i)\n...     break           #執行到break就會跳出\n... else:\n...     print('結束')   #跳出後不會執行\n...\n0\n```"
+        },
+        {
+            "type": "text",
+            "content": "##### 無限迴圈"
+        },
+        {
+            "type": "text",
+            "content": "while迴圈有可能會無法停止，只要while的條件式永遠是True，迴圈就不會停止。除非你想讓你的迴圈跑到天荒地老電腦壞掉，不然請確認你的條件式最後會變成False。"
+        },
+        {
+            "type": "text",
+            "content": "如果不小心造成無限迴圈，可以按下Ctrl+C觸發異常跳出迴圈。"
+        },
+        {
+            "type": "code",
+            "content": "```python=  \n>>> a,b = 3,3\n>>> while a == b:\n...     print('a等於b')\n...\na等於b\na等於b\na等於b\na等於b\na等於b\na等於b\na等於b\na等於b    #按Ctrl+C\nTraceback (most recent call last):\n  File \"<stdin>\", line 3, in <module>\nKeyboardInterrupt    #觸發異常導致中斷\n```"
+        },
+        {
+            "type": "text",
+            "content": "無限迴圈通常會搭配break來達到在特定的情況下跳出。"
+        },
+        {
+            "type": "code",
+            "content": "```python=  \n>>> while True:\n...     a = input(\"輸入4結束迴圈:\")\n...     if a==\"4\":\n...         break\n...     print(\"輸入的是\",a)\n...\n輸入4結束迴圈:1\n輸入的是 1\n輸入4結束迴圈:a\n輸入的是 a\n輸入4結束迴圈:3.22\n輸入的是 3.22\n輸入4結束迴圈:4\n```"
+        }
+    ]
+}

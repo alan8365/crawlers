@@ -1,0 +1,25 @@
+{
+    "course_info": {
+        "lesson_number": "3",
+        "chapter": "3",
+        "name": " 邏輯運算子"
+    },
+    "all_block": [
+        {
+            "type": "text",
+            "content": "邏輯運算子就是進行邏輯運算所需的邏輯運算符，下表以a代表邏輯運算符左邊的內容，b代表邏輯運算符右邊的內容："
+        },
+        {
+            "type": "table",
+            "content": "<table>\n    <tr>\n        <td>a and b</td>\n        <td>若a與b都是True就返回True，只要一個是False就返回False</td>\n    </tr>\n    <tr>\n        <td>a or b</td>\n        <td>若a或b有一個是True就返回True，都不是True就返回False</td>\n    </tr>\n    <tr>\n        <td>not a</td>\n        <td>若a為True就返回False，若a為False就返回True</td>\n    </tr>\n    <tr>\n        <td>a ^ b</td>\n        <td>xor運算，若a與b的布林值相同就返回False，不同則返回True。</td>\n    </tr>\n</table>"
+        },
+        {
+            "type": "text",
+            "content": "在Python中，None、0進行邏輯判斷時會被視為False。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> True and False #有一個是False，返回False\nFalse\n>>> True or False #有一個是True，返回True\nTrue\n>>> not True\nFalse\n>>> not False\nTrue\n>>> not None #None為False\nTrue\n>>> True ^ False #xor\nTrue\n```"
+        }
+    ]
+}

@@ -1,0 +1,229 @@
+{
+    "course_info": {
+        "lesson_number": "4",
+        "chapter": "1",
+        "name": " 串列"
+    },
+    "all_block": [
+        {
+            "type": "text",
+            "content": "容器(Container)是指存放資料的地方，儲存在容器內的資料稱為元素(Element)，這一課教的串列型態是有序的，每個元素都有它的位置，元素的位置稱為索引(Index)，串列內的元素可以是任何資料型態，包括其他種類的容器(字串、字典、元組、集合)，list之所以叫串列是因為裡面的元素像是被串起來的，一條線串起它們成一列。"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>建立串列</h5> "
+        },
+        {
+            "type": "text",
+            "content": "使用中括號或是 list() 建立串列，串列內的元素用逗號分隔，中括號在Python內就代表串列，而 list() 可以將其它容器轉換成串列。"
+        },
+        {
+            "type": "code",
+            "content": "```\n變數名稱 = [元素1, 元素2...]\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> My_list1 = [] #建立空串列\n>>> My_list2 = ['Python', 'Java', 'C++']\n>>> My_list3 = [[1, 2, 3], [4, 5, 6]] #串列內可以包含容器\n```"
+        },
+        {
+            "type": "code",
+            "content": "```\n變數名稱 = list(容器)\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> My_list1 = list() #返回一個空串列\n>>> My_list1\n[]\n>>> My_list2 = list('Python') #將字串轉換成串列\n>>> My_list2\n['P', 'y', 't', 'h', 'o', 'n']\n```"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>取得串列中的元素</h5> "
+        },
+        {
+            "type": "text",
+            "content": "使用索引值取得元素，0是第一個元素，1是第二個元素，而-1代表倒數第一個元素，-2代表倒數第二個元素，以此類推。"
+        },
+        {
+            "type": "code",
+            "content": "```\n串列[索引值]\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> My_list = [0, 1, 2, 3, 4, 5, 6]\n>>> My_list[2] #第三個元素\n2\n>>> My_list[-2] #倒數第二個元素\n5\n>>> My_list = [[1, 2, 3], [4, 5, 6]]\n>>> My_list[0] #取出第一個元素\n[1, 2, 3]\n>>> My_list[0][0] #取出第一個元素中的第一個元素\n1\n```"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>添加元素進串列</h5>"
+        },
+        {
+            "type": "text",
+            "content": "使用 append() 添加一個元素到串列末尾。"
+        },
+        {
+            "type": "code",
+            "content": "```\n串列.append(元素)\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> My_list = [0, 1, 2, 3]\n>>> My_list.append(4)\n>>> My_list\n[0, 1, 2, 3, 4]\n>>> My_list.append('throne') #添加一個字串\n>>> My_list\n[0, 1, 2, 3, 4, 'throne']\n>>> My_list.append(['A', 'B', 'C']) #添加一個串列\n>>> My_list\n[0, 1, 2, 3, 4, 'throne', ['A', 'B', 'C']]\n```"
+        },
+        {
+            "type": "text",
+            "content": "使用 extend() 添加另一個容器內的元素到原本的串列末尾。"
+        },
+        {
+            "type": "code",
+            "content": "```\n串列.extend(容器)\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> My_list = ['水果蛋糕', '燒肉丼']\n>>> My_list.extend(['日式豬排飯', '咖哩飯', '牛肉火鍋']) #添加串列內的元素\n>>> My_list\n['水果蛋糕', '燒肉丼', '日式豬排飯', '咖哩飯', '牛肉火鍋']\n>>> My_list = []\n>>> My_list.extend('Java') #添加字串內的元素\n>>> My_list\n['j', 'a', 'v', 'a']\n```"
+        },
+        {
+            "type": "text",
+            "content": "加法和乘法運算子也可以運用在串列上， + 可以連接串列， * 可以重複串列元素。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = ['aa']\n>>> b = ['bb']\n>>> My_list = a + b #a串列的元素加上b串列的元素\n>>> My_list\n['aa', 'bb']\n>>> My_list = My_list * 3 #可縮寫為My_list *= 3\n>>> My_list\n['aa', 'bb', 'aa', 'bb','aa','bb']\n```"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>修改串列中的元素</h5>"
+        },
+        {
+            "type": "text",
+            "content": "使用 insert() 插入元素到指定的索引位置上，原本的元素會依序往後排列，或是使用 串列[索引值] 修改它指向的元素。"
+        },
+        {
+            "type": "code",
+            "content": "```\n串列.insert(索引值, 要插入的元素)\n串列[索引值] = 新元素\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> My_list = [0, 1, 2, 3]\n>>> My_list.insert(0, 'A')\n>>> My_list\n['A', 0, 1, 2, 3]\n>>> My_list[0] = 'B'\n>>> My_list\n['B', 0, 1, 2, 3]\n```"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>刪除串列中的元素</h5>"
+        },
+        {
+            "type": "text",
+            "content": "使用 remove() 刪除串列中指定的元素，若串列中有兩個指定的元素， remove() 只會刪除第一個找到的，也就是索引值較前面的元素。"
+        },
+        {
+            "type": "code",
+            "content": "```\n串列.remove(元素)\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> My_list = [1, 2, 3, 1]\n>>> My_list.remove(1)\n>>> My_list\n[2, 3, 1]\n```"
+        },
+        {
+            "type": "text",
+            "content": "使用 clear() 清空串列內的元素，使其變成一個空串列。"
+        },
+        {
+            "type": "code",
+            "content": "```\n串列.clear()\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> My_list = [0, 1, 2, 3]\n>>> My_list.clear()\n>>> My_list\n[]\n```"
+        },
+        {
+            "type": "text",
+            "content": "其他參見<a href=http://easycoding.nutc.edu.tw/wiki/5/2>文件：串列的操作&函式</a>"
+        },
+        {
+            "type": "text",
+            "content": "將我們需要的資料以最佳的方式儲存可以節省空間和優化搜尋、處理的速度，例如一串相關並且有順序性的資料可以使用串列儲存；需要鍵與值對照的一對資料可以使用字典儲存；不需更改的資料可以使用元組儲存；集合就是數學意義上的元素集合，而有些共同的操作和函式是串列、字串、字典、元組和集合都可以使用的。"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>容器的共同操作&函式</h5>"
+        },
+        {
+            "type": "text",
+            "content": "<h6>比較元素</h6>"
+        },
+        {
+            "type": "text",
+            "content": "使用 == 與 != 比較運算子來比較兩個容器內的元素是否相同，使用 is 與 is not 判斷兩個變數是否指向同一個容器。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = [45, 86, 92] \n>>> b = [45, 86, 92]\n>>> a == b\nTrue\n>>> a is b #a與b雖然內容一樣，但他們其實是不同的串列\nFalse\n>>> b = [92, 45, 86] #我們修改了b的元素順序\n>>> a == b #雖然串列內的元素還是一樣，但只要順序不同判斷結果就不相同\nFalse\n>>> a = [11, 22, 33] #現在我們將a指向這個新串列\n>>> b = a #將b指向a指向的串列\n>>> b\n[11, 22, 33]\n>>> a is b #a與b指向同一個串列\nTrue\n>>> b[1] = 55 #這時再修改b的元素\n>>> b\n[11,55,33]\n>>> a #a的元素也會改變\n[11,55,33]\n```"
+        },
+        {
+            "type": "text",
+            "content": "<h6>取得元素個數</h6>"
+        },
+        {
+            "type": "text",
+            "content": "使用 len() 取得容器的長度，也就是容器內的元素個數。"
+        },
+        {
+            "type": "code",
+            "content": "```\nlen(容器)\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> My_list = ['A', 'B', 'C', 'D', 'E']\n>>> len(My_list)\n5\n```"
+        },
+        {
+            "type": "text",
+            "content": "<h6>檢查是否具有某個元素</h6>"
+        },
+        {
+            "type": "text",
+            "content": "使用 in 判斷容器內是否具有某個元素，not in 判斷容器內是否不具有某個元素。"
+        },
+        {
+            "type": "code",
+            "content": "```\n元素 in 容器\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n#承上例\n>>> 'A' in My_list\nTrue\n>>> 'F' in My_list\nFalse\n>>> 'F' not in My_list\nTrue\n```"
+        },
+        {
+            "type": "text",
+            "content": "<h6>取得最大值與最小值</h6>"
+        },
+        {
+            "type": "text",
+            "content": "使用 max() 和 min() 可以取得容器中的最大值與最小值。"
+        },
+        {
+            "type": "code",
+            "content": "```\nmax(容器)\nmin(容器)\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> My_list1 = [12, 85, 49, 63, 8, 52, 101]\n>>> My_list2 = ['A', 'Y', 'P', 'Z', 'a', 'z']\n>>> max(My_list1)\n101\n>>> min(My_list1)\n8\n>>> max(My_list2)\n'z'\n>>> min(My_list2)\n'A'\n```"
+        },
+        {
+            "type": "text",
+            "content": "<h6>排序元素</h6>"
+        },
+        {
+            "type": "text",
+            "content": "sorted() 可以將容器內的元素排序後返回一個新串列，若容器是字典只會排序和返回字典的鍵。還有一個排序方法 list.sort() 是只有串列可以使用的， list.sort() 的用法與 sorted() 相同，差別是 list.sort() 會直接排序串列而 sorted() 會返回新串列。"
+        },
+        {
+            "type": "code",
+            "content": "```\nsorted(容器[, key=None, reverse=False]) #返回一個串列\n串列.sort([key=None, reverse=False]) #直接排序串列\n```"
+        },
+        {
+            "type": "text",
+            "content": "其中的參數key只接受一個函式，默認為None，用來設定排序的依據，在文件中有詳細說明，reverse參數是設定升序排序或降序排序，默認為升序，需要降序排序時就把reverse改成True。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> My_list = [40, 20, 100, 0, 80]\n>>> My_list = sorted(My_list)\n>>> My_list\n[0, 20, 40, 80, 100]\n>>> My_list = sorted(My_list, reverse=True) #降序排列\n>>> My_list\n[100, 80, 40, 20, 0]\n>>> My_list = ['B', 'E','D','A','C']\n>>> My_list.sort()\n>>> My_list\n['A', 'B', 'C', 'D', 'E']\n>>> My_list.sort(reverse=True) #降序排列\n>>> My_list\n['E', 'D', 'C', 'B', 'A']\n```"
+        },
+        {
+            "type": "text",
+            "content": "其他參見<a href=http://easycoding.nutc.edu.tw/wiki/5/1>文件：可迭代物件的共同操作&函式</a>"
+        }
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "course_info": {
+        "lesson_number": "5",
+        "chapter": "2",
+        "name": " for迴圈"
+    },
+    "all_block": [
+        {
+            "type": "text",
+            "content": "<style>"
+        },
+        {
+            "type": "text",
+            "content": "h4{"
+        },
+        {
+            "type": "text",
+            "content": "color:purple"
+        },
+        {
+            "type": "text",
+            "content": "}"
+        },
+        {
+            "type": "text",
+            "content": "h5{"
+        },
+        {
+            "type": "text",
+            "content": "color:darkblue"
+        },
+        {
+            "type": "text",
+            "content": "}"
+        },
+        {
+            "type": "text",
+            "content": "</style>"
+        },
+        {
+            "type": "text",
+            "content": "迴圈是一段在程式中只出現一次，但是會根據條件執行多次內容的程式碼。如果想輸出1到100的所有數，每輸出一行就要print顯然太麻煩了，這時就需要用到迴圈。"
+        },
+        {
+            "type": "text",
+            "content": "##### 計數迴圈"
+        },
+        {
+            "type": "text",
+            "content": "for迴圈擁有一個迴圈變數，會針對某一串物件中的所有項目都執行一次，像是字串、串列、集合、字典或元組等，皆可使用。"
+        },
+        {
+            "type": "code",
+            "content": "```\nfor 迴圈變數 in 某個容器:\n    迴圈內容\n```"
+        },
+        {
+            "type": "text",
+            "content": "迴圈變數會從容器的第一個元素開始輪替，直到輪到最後一個後結束跳出。過程中迴圈變數的值會等於輪到的元素的值。"
+        },
+        {
+            "type": "text",
+            "content": "![](https://i.imgur.com/btnwdFt.png)"
+        },
+        {
+            "type": "code",
+            "content": "```python= \n>>> a = \"abcdef\"\n>>> for i in a:         #迴圈頭\n...     print(i)        #迴圈內容\n...\na\nb\nc\nd\ne\nf\n>>> for i in range(5):\n...     print(i)\n...\n0\n1\n2\n3\n4\n>>> My_list = ['python', 'js', 'SQL']\n>>> for i in My_list:\n...     print(i)\n...\npython\njs\nSQL\n```"
+        },
+        {
+            "type": "text",
+            "content": "##### 在迴圈執行完後執行"
+        },
+        {
+            "type": "text",
+            "content": "在for迴圈後使用else可以使else的內容在整個迴圈執行完後執行。若是執行到一半就跳出迴圈則不予執行。"
+        },
+        {
+            "type": "code",
+            "content": "```\nfor 迴圈變數 in 某個集合:\n    迴圈內容\nelse:\n    執行完迴圈後要執行的程式\n```"
+        },
+        {
+            "type": "text",
+            "content": "![](https://i.imgur.com/QdMI9gR.png)"
+        },
+        {
+            "type": "code",
+            "content": "```python=  \n>>> for i in range(5):\n...     print(i)\n... else:\n...     print(\"結束\")\n...\n0\n1\n2\n3\n4\n結束\t    \n```"
+        },
+        {
+            "type": "text",
+            "content": "就算容器是空的else也會執行。"
+        },
+        {
+            "type": "code",
+            "content": "```python=     \n>>> for i in []:\n...     print(i)\n... else:\n...     print(\"結束\")\n...\n結束\n```"
+        },
+        {
+            "type": "text",
+            "content": "如果遇到break時會直接跳出，不會執行else。因此break常被用來搭配else使用，或是拿來找裡面是否有你要的元素。"
+        },
+        {
+            "type": "text",
+            "content": "註：break在U5-5會詳細說明。"
+        },
+        {
+            "type": "code",
+            "content": "```python=  \n>>> score_list = [60,99,15,77,55,13,59,78]\n>>> a = int(input(\"請輸入要找的分數(大於等於0小於100):\"))\n請輸入要找的分數(大於等於0小於100):59\n>>> for i in score_list:\n...     if i == a:\n...         print(\"有%d分\" % a)\n...         break\n... else:\n...     print(\"沒有%d分\" % a)\n...\n有59分\n```"
+        }
+    ]
+}

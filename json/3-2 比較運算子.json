@@ -1,0 +1,37 @@
+{
+    "course_info": {
+        "lesson_number": "3",
+        "chapter": "2",
+        "name": " 比較運算子"
+    },
+    "all_block": [
+        {
+            "type": "text",
+            "content": "比較運算子就是進行比較所需的比較符號，下表以a代表比較符號左邊的內容，b代表比較符號右邊的內容："
+        },
+        {
+            "type": "table",
+            "content": "<table>\n    <tr>\n        <td>a > b</td>\n        <td>判斷 a 是否大於 b</td>\n    </tr>\n    <tr>\n        <td>a >= b</td>\n        <td>判斷 a 是否大於等於 b</td>\n    </tr>\n    <tr>\n        <td>a < b</td>\n        <td>判斷 a 是否小於 b</td>\n    </tr>\n    <tr>\n        <td>a <= b</td>\n        <td>判斷 a 是否小於等於 b</td>\n    </tr>\n    <tr>\n        <td>a == b</td>\n        <td>判斷 a 與 b 內容是否相同</td>\n    </tr>\n    <tr>\n        <td>a != b</td>\n        <td>判斷 a 與 b 內容是否不相同</td>\n    </tr>\n     <tr>\n        <td>a is b</td>\n        <td>判斷 a 與 b 是否指向同一個東西</td>\n    </tr>\n    <tr>\n        <td>a is not b</td>\n        <td>判斷 a 與 b 是否指向不一樣的東西</td>\n    </tr>\n    <tr>\n        <td>a in b</td>\n        <td>判斷 a 是否在 b 容器(如串列、字串、字典、元組、集合、字串等)內</td>\n    </tr>\n    <tr>\n        <td>a not in b</td>\n        <td>判斷 a 是否不在 b 容器(如串列、字串、字典、元組、集合、字串等)內</td>\n    </tr>\n</table>"
+        },
+        {
+            "type": "text",
+            "content": "補充說明："
+        },
+        {
+            "type": "text",
+            "content": "- == 與 = 的不同：兩個等於符號是比較運算子，一個等於符號是指派的動作。"
+        },
+        {
+            "type": "text",
+            "content": "- == 與 is 的不同：== 與 is 不一樣的地方為 == 是判斷內容，如兩個變數的內容相同，使用 == 判斷會返回True，可是這兩個變數不是指向同一個東西，他們只是內容一樣，使用is判斷會返回False。"
+        },
+        {
+            "type": "text",
+            "content": "- is、 is not、in、not in 在第四章容器時會再次說明。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> 6 > 2\nTrue\n>>> 2 > 6\nFalse\n>>> 100 == 100\nTrue\n>>> 100 != 100\nFalse\n>>> 5 + 2 < 2 + 3 #也可以比較運算式\nFalse\n```"
+        }
+    ]
+}

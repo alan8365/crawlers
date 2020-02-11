@@ -1,0 +1,33 @@
+{
+    "course_info": {
+        "lesson_number": "3",
+        "chapter": "4",
+        "name": " 運算子優先級"
+    },
+    "all_block": [
+        {
+            "type": "text",
+            "content": "如果要計算一個有很多不同運算子的運算式，例如： 8 + 4 * 6 - 23，我們知道要先算乘除再算加減，Python也會先算 4 * 6 等於 24 再算 8 + 24 - 23，最後答案為 9 ，所以乘除運算子的優先級比加減還要高，而次方運算子的優先級大於乘除，若運算式中的運算子都處於同一層級，運算順序就是由左往右。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> 8 + 4 * 6 - 23\n9\n>>> 5 * 6 ** 2\n180\n>>> 30 / 5 * 2\n12.0\n```"
+        },
+        {
+            "type": "text",
+            "content": "以8 + 4 * 6 - 23為例，假如要先算8 + 4，那就使用小括號把8 + 4刮起來就好了，小括號的優先級最大，因此Python會先算小括號內的運算式。 "
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> (8 + 4) * 6 - 23\n49\n>>> (5 * 6) ** 2\n900\n>>> 30 / (5 * 2)\n3.0\n```"
+        },
+        {
+            "type": "text",
+            "content": "運算子優先級，由高到低："
+        },
+        {
+            "type": "table",
+            "content": "<table>\n    <tr>\n        <td>()</td>\n        <td>小括弧</td>\n    </tr>\n    <tr>\n        <td>**</td>\n        <td>次方</td>\n    </tr>\n    <tr>\n        <td>%</td>\n        <td>餘數</td>\n    </tr>\n    <tr>\n        <td>//</td>\n        <td>除(取小於等於計算結果的整數)</td>\n    </tr>\n    <tr>\n        <td>/</td>\n        <td>除</td>\n    </tr>\n    <tr>\n        <td>*</td>\n        <td>乘</td>\n    </tr>\n    <tr>\n        <td>+</td>\n        <td>加</td>\n    </tr>\n    <tr>\n        <td>-</td>\n        <td>減</td>\n    </tr>\n</table>"
+        }
+    ]
+}
