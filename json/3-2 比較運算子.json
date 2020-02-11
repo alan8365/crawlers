@@ -4,7 +4,7 @@
         "chapter": "2",
         "name": " 比較運算子"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "比較運算子就是進行比較所需的比較符號，下表以a代表比較符號左邊的內容，b代表比較符號右邊的內容："
@@ -32,6 +32,28 @@
         {
             "type": "code",
             "content": "```python=\n>>> 6 > 2\nTrue\n>>> 2 > 6\nFalse\n>>> 100 == 100\nTrue\n>>> 100 != 100\nFalse\n>>> 5 + 2 < 2 + 3 #也可以比較運算式\nFalse\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\nA: True\n```"
+        },
+        {
+            "type": "text",
+            "content": "請輸入正確的變數名稱："
+        },
+        {
+            "type": "code",
+            "content": "```python=\na = 48\nb = 12\nprint('A:', _ > _)\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：ab"
         }
     ]
 }

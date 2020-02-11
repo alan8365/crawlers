@@ -4,7 +4,7 @@
         "chapter": "4",
         "name": " 元組"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "元組就是元素的組合的意思，可以視為不能更改的串列，元組是有順序性的，可以透過索引來取得元組內的元素，串列與元組的差別就是元組不可變而串列是可變的，所以創建了元組後，裡面的元素便不能更新也不能刪除，只能刪除整個元組。"
@@ -80,6 +80,28 @@
         {
             "type": "code",
             "content": "```python=\n>>> My_tuple = ('A',)\n>>> My_tuple = My_tuple + ('B',) #可縮寫為My_tuple += ('B',)\n>>> My_tuple\n('A', 'B')\n>>> My_tuple *= 2\n>>> My_tuple\n('A', 'B', 'A', 'B')\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n(86, 32, 26, 54)\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的元組操作："
+        },
+        {
+            "type": "code",
+            "content": "```python=\nMy_tuple = (86, 32, 26)\nMy_tuple __ (___)\nprint(My_tuple)\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：+=54,"
         }
     ]
 }

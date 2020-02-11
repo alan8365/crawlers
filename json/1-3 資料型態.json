@@ -4,7 +4,7 @@
         "chapter": "3",
         "name": " 資料型態"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "subtitle",
             "content": "<h5>數字</h5>"
@@ -96,6 +96,20 @@
         {
             "type": "code",
             "content": "```python=\n>>> type(100) #返回整數型態\n\"<class 'int'>\"\n>>> type(100.) #返回浮點數型態\n\"<class 'float'>\"\n>>> type(True) #返回布林型態\n\"<class 'bool'>\"\n>>> type('你好') #返回字串型態\n\"<class 'str'>\"\n>>> type(None) #返回空型態\n\"<class 'NoneType'>\"\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "請填入正確的函式與變數名稱："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = 123\n>>> b = 'python'\n>>> c = True\n>>> ____(_)\n\"<class 'str'>\"\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：typeb"
         }
     ]
 }

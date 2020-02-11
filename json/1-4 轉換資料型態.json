@@ -4,7 +4,7 @@
         "chapter": "4",
         "name": " 轉換資料型態"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": " "
@@ -48,6 +48,28 @@
         {
             "type": "text",
             "content": "其他參見<a href='http://easycoding.nutc.edu.tw/wiki/3/1'>文件：轉換函式</a>"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> type(a)\n\"<class 'int'>\"\n>>> type(b)\n\"<class 'str'>\"\n>>> type(c)\n\"<class 'float'>\"\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的函式名稱："
+        },
+        {
+            "type": "code",
+            "content": "```python=\na = '123'\na = ___(a)\nb = 123\nb = ___(b)\nc = 123\nc = _____(c)\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：intstrfloat"
         }
     ]
 }

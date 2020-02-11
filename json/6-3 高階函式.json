@@ -4,7 +4,7 @@
         "chapter": "3",
         "name": " 高階函式"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "###### tags: `easy coding`"
@@ -100,6 +100,28 @@
         {
             "type": "code",
             "content": "```python=\ndef int_required(func):\n    \n    def result(n):\n        if not isinstance(n, int):\n            return \"請輸入整數\"\n        \n        return func(n)\n    return result\ndef is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, n):\n        if n % i == 0:\n            return False\n    return True\nis_prime = int_required(is_prime)\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "text",
+            "content": ":::"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> for i in range(10):\n... \tis_prime(i)\n    \narg:(0,),output:False\narg:(1,),output:False\narg:(2,),output:True\narg:(3,),output:True\narg:(4,),output:False\narg:(5,),output:True\narg:(6,),output:False\narg:(7,),output:True\narg:(8,),output:False\narg:(9,),output:False\n```"
+        },
+        {
+            "type": "text",
+            "content": ":::info"
+        },
+        {
+            "type": "text",
+            "content": "完成以下程式碼使輸出結果與題目相同："
         }
     ]
 }

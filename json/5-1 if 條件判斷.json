@@ -4,7 +4,7 @@
         "chapter": "1",
         "name": " if 條件判斷"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "<style>"
@@ -180,6 +180,12 @@
         {
             "type": "text",
             "content": "**此方法在Python 2.5以前的版本並不可用!**"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "進行填空並讓輸出結果為\"少年\"。"
         }
     ]
 }

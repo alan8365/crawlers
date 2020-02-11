@@ -4,7 +4,7 @@
         "chapter": "4",
         "name": " 巢狀迴圈"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "<style>"
@@ -76,6 +76,24 @@
         {
             "type": "code",
             "content": "```\n*\n**\n***\n****\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n     \n    *\n   **\n  ***\n ****\n```"
+        },
+        {
+            "type": "text",
+            "content": "完成以下程式碼使輸出結果與題目相同："
+        },
+        {
+            "type": "code",
+            "content": "```python=\nfor i in range(5):\n    for j in range(___):\n        print(\" \",end='')\n    for j in range(_):\n        print(\"*\",end='')\n    print()\n```"
         }
     ]
 }

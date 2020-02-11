@@ -4,7 +4,7 @@
         "chapter": "6",
         "name": " 切片、range"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "title",
             "content": "<h4>切片</h4>"
@@ -72,6 +72,28 @@
         {
             "type": "code",
             "content": "```python=\n>>> list(range(10)) \n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n>>> list(range(0, 12))\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\n>>> list(range(12, 0, -1)) #如果步長為負，開始的值要大於結束的值\n[12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n1: ['H', 'G', 'F', 'E', 'D', 'C', 'B', 'A']\n2: ['A', 'C', 'E', 'G']\n3: ['D', 'E', 'F']\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的切片操作："
+        },
+        {
+            "type": "code",
+            "content": "```python=\nMy_list = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']\nprint('1:', My_list[____])\nprint('2:', My_list[___])\nprint('3:', My_list[___])\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：::-1::23:6"
         }
     ]
 }

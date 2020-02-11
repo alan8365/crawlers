@@ -4,7 +4,7 @@
         "chapter": "1",
         "name": " 算術運算子"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "code",
             "content": "```python=\n>>> 1 + 2\n3\n>>> -1 + 8\n7\n```"
@@ -36,6 +36,28 @@
         {
             "type": "code",
             "content": "```python=\n>>> a = 10\n>>> a += 1 #a = a + 1，a = 11\n>>> a -= 2 #a = a - 2，a = 9\n>>> a *= 2 #a = a * 2，a = 18\n>>> a /= 3 #a = a / 3，a = 6.0\n>>> a %= 4 #a = a % 4，a = 2.0\n>>> a **= 3 #a = a ** 3，a = 8.0\n>>> a\n8.0\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\nA: 100\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的算數運算子："
+        },
+        {
+            "type": "code",
+            "content": "```python=\na = 10\nb = 2\nprint('A:', a __ b)\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：**"
         }
     ]
 }

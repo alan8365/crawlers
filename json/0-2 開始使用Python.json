@@ -4,7 +4,7 @@
         "chapter": "2",
         "name": " 開始使用Python"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "subtitle",
             "content": "<h5>IDLE</h5>"
@@ -84,6 +84,20 @@
         {
             "type": "text",
             "content": "進入Python的世界後我們將開始學習Python的基礎架構，也就是撰寫Python程式須知的基本概念，再進階描述Python的功能與撰寫Python程式。 "
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "請填入Python官方的IDE名稱："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n____\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：IDLE"
         }
     ]
 }

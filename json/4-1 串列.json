@@ -4,7 +4,7 @@
         "chapter": "1",
         "name": " 串列"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "容器(Container)是指存放資料的地方，儲存在容器內的資料稱為元素(Element)，這一課教的串列型態是有序的，每個元素都有它的位置，元素的位置稱為索引(Index)，串列內的元素可以是任何資料型態，包括其他種類的容器(字串、字典、元組、集合)，list之所以叫串列是因為裡面的元素像是被串起來的，一條線串起它們成一列。"
@@ -224,6 +224,28 @@
         {
             "type": "text",
             "content": "其他參見<a href=http://easycoding.nutc.edu.tw/wiki/5/1>文件：可迭代物件的共同操作&函式</a>"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n['b', 'c', 'd', '★', 'e', 'f']\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的函式名稱："
+        },
+        {
+            "type": "code",
+            "content": "```python=\nMy_str = 'abcde'\nMy_list = ____(My_str)\nMy_list.______('f')\nMy_list.______('a')\nMy_list.______(3, '★')\nprint(My_list)\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：listappendremoveinsert"
         }
     ]
 }

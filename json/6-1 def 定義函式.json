@@ -4,11 +4,7 @@
         "chapter": "1",
         "name": " def 定義函式"
     },
-    "all_block": [
-        {
-            "type": "text",
-            "content": "###### tags: `easy coding`"
-        },
+    "course_block": [
         {
             "type": "text",
             "content": "當你發現你要寫的某段程式碼之前已經寫過了而且功能都一樣，並且不只用到一遍時，你可以使用函式把他們裝起來，有需要時再叫出來用就好。這樣可以使程式的重複性沒那麼高，當後來有需要修改時也不用一個一個去翻，可以直接改寫他們共同使用的函式。"
@@ -112,6 +108,24 @@
         {
             "type": "code",
             "content": "```python=\n>>> def hello():\n...     print(\"easy coding\")\n>>> a = hello()\neasy coding\n>>> print(a)\nNone\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "輸出結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = min(12, 58)\n>>> print(a)\n12\n```"
+        },
+        {
+            "type": "text",
+            "content": "完成以下程式碼使輸出結果與題目相同："
+        },
+        {
+            "type": "code",
+            "content": "```python=\ndef ___(_, b):\n    if a > b:\n        a = b\n    ______ a\n```"
         }
     ]
 }

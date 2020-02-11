@@ -4,7 +4,7 @@
         "chapter": "3",
         "name": " while迴圈"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "<style>"
@@ -112,6 +112,24 @@
         {
             "type": "code",
             "content": "```python=  \n>>> while True:\n...     a = input(\"輸入4結束迴圈:\")\n...     if a==\"4\":\n...         break\n...     print(\"輸入的是\",a)\n...\n輸入4結束迴圈:1\n輸入的是 1\n輸入4結束迴圈:a\n輸入的是 a\n輸入4結束迴圈:3.22\n輸入的是 3.22\n輸入4結束迴圈:4\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n02468101214\n```"
+        },
+        {
+            "type": "text",
+            "content": "根據執行結果完成以下程式。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\ni = 0\n_____ i < 15_\n     print(i,end='')\n     i__2\n```"
         }
     ]
 }

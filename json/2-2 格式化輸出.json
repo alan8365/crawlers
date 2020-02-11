@@ -4,7 +4,7 @@
         "chapter": "2",
         "name": " 格式化輸出"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "若我們想要控制資料的呈現方式，而不只是使用分隔字元或結尾字元，我們可以使用三種方法格式化資料：%格式化字元、字串的format方法、format函式。"
@@ -224,6 +224,28 @@
         {
             "type": "code",
             "content": "```python=\n>>> format('★', '=>10s')\n'=========★'\n>>> format('★', '=^10s')\n'====★====='\n>>> format('★', '=<10s')\n'★========='\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n    3.14\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的格式化字串，輸出格式：欄寬為8並向右靠齊，輸出pi至小數點第二位。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\npi = 3.14159265359\nprint(format(pi, '_____'))\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：>8.2f"
         }
     ]
 }

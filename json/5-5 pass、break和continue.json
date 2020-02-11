@@ -4,7 +4,7 @@
         "chapter": "5",
         "name": " pass、break和continue"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "<style>"
@@ -92,6 +92,24 @@
         {
             "type": "code",
             "content": "```\n11\n13\n15\n17\n19\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n   *\n  ***\n *****\n*******\n```"
+        },
+        {
+            "type": "text",
+            "content": "完成以下程式碼使輸出結果與題目相同："
+        },
+        {
+            "type": "code",
+            "content": "```python=\nfor i in range(1, 9):\n    if i % _ == 0:\n        ________\n    for j in range(1, (9 - i) // 2):\n        print(\" \", end=\"\")\n    for j in range(1, i + 1):\n        print(\"*\", end=\"\")\n    print()\n```"
         }
     ]
 }

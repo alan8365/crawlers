@@ -4,7 +4,7 @@
         "chapter": "6",
         "name": " 生成式 Comprehensions"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "<style>"
@@ -136,6 +136,24 @@
         {
             "type": "code",
             "content": "```python=\n>>> My_dict = {1:'Mary',2:'Tom',3:'Jenny'}\n>>> {v:k for k,v in My_dict.items()}\n{'Mary': 1, 'Tom': 2, 'Jenny': 3}\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> poker['A'] < poker['5']\nTrue\n>>> poker['J'] < poker['5']\nFalse\n```"
+        },
+        {
+            "type": "text",
+            "content": "完成以下程式碼使輸出結果與題目相同："
+        },
+        {
+            "type": "code",
+            "content": "```python=\npoker = _str(_):i for i in range(2, 10)_\npoker['A'] = 1\npoker['J'] = 10\npoker['Q'] = 11\npoker['K'] = 12\n```"
         }
     ]
 }

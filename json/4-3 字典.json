@@ -4,7 +4,7 @@
         "chapter": "3",
         "name": " 字典"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "字典可以儲存一對的元素，鍵(Key)與值(Value)，就像字典裡的字與字義，鍵就是字，值就是字義，我們查字典的方法就是通過字查詢相應的內容，而不用翻閱整本字典，Python的字典結構也是一樣，只要知道鍵就可以直接獲得相應的值，取得資料就相當容易。而Key被翻譯為鍵是因為Key是找到值的關鍵。"
@@ -148,6 +148,28 @@
         {
             "type": "code",
             "content": "```python=\n>>> My_dict = {'A': 'Alex', 'B': 'Benny', 'C': 'Candy', 'D': 'David'}\n>>> list(My_dict)\n['A', 'B', 'C', 'D']\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n{1: 'one', 2: 'two', 4: 'four'}\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的函式名稱："
+        },
+        {
+            "type": "code",
+            "content": "```python=\nMy_dict = {1: 'one', 2: 'two'}\nother_dict = {3: 'three', 4: 'four'}\nMy_dict.______(other_dict)\nMy_dict.___(_)\nprint(My_dict)\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：updatepop3"
         }
     ]
 }

@@ -4,7 +4,7 @@
         "chapter": "2",
         "name": " for迴圈"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "<style>"
@@ -104,6 +104,24 @@
         {
             "type": "code",
             "content": "```python=  \n>>> score_list = [60,99,15,77,55,13,59,78]\n>>> a = int(input(\"請輸入要找的分數(大於等於0小於100):\"))\n請輸入要找的分數(大於等於0小於100):59\n>>> for i in score_list:\n...     if i == a:\n...         print(\"有%d分\" % a)\n...         break\n... else:\n...     print(\"沒有%d分\" % a)\n...\n有59分\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n01234\n```"
+        },
+        {
+            "type": "text",
+            "content": "完成以下程式碼使輸出結果與題目相同："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n___ i __ range(5):\n    print(_ ,end='')\n```"
         }
     ]
 }

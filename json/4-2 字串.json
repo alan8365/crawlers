@@ -4,7 +4,7 @@
         "chapter": "2",
         "name": " 字串"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "字串也是一種容器，字串中每一個字母、符號或數字都是字串中的元素，也可以使用索引來取得元素。"
@@ -116,6 +116,28 @@
         {
             "type": "text",
             "content": "其他參見<a href=http://easycoding.nutc.edu.tw/wiki/5/3>文件：字串的操作&函式</a>"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n替換前: ABCABCABC\n替換後: ABDABDABD\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的字串操作："
+        },
+        {
+            "type": "code",
+            "content": "```python=\nMy_str = 'ABC' _ 3\nprint('替換前:',My_str)\nprint('替換後:',My_str.replace('_','_'))\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：*CD"
         }
     ]
 }

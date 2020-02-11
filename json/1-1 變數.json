@@ -4,7 +4,7 @@
         "chapter": "1",
         "name": " 變數"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "當我們開始寫程式時，一定要先學會變數(Variable)，可以把變數想像成資料上的標籤，如果沒有標籤，就沒有辦法查詢我們需要的資料，資料可能是一串字或數字，不同種類的資料具有不同的資料型態，而變數之所以叫變數是因為可以改變它代表的資料。"
@@ -72,6 +72,32 @@
         {
             "type": "text",
             "content": "其他參見<a href='http://easycoding.nutc.edu.tw/wiki/1/1'>文件：保留字說明</a>"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a\n253\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的變數名稱："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n_ = 253\n```"
+        },
+        {
+            "type": "text",
+            "content": "註：填充題內有'>>>'提示符號的是在互動交談模式中，沒有提示符號的是在程式碼檔案中。"
+        },
+        {
+            "type": "text",
+            "content": "答案：a"
         }
     ]
 }

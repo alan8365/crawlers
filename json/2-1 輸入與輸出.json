@@ -4,7 +4,7 @@
         "chapter": "1",
         "name": " 輸入與輸出"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "我們學習了變數後就可以使用print()在螢幕上輸出變數的內容，使用input()獲取使用者鍵盤輸入的資料並指派給變數。"
@@ -84,6 +84,28 @@
         {
             "type": "code",
             "content": "```\nJack♥Mary\nJack★Mary★\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\n請輸入:100\n輸入的值:100\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的函式與默認參數名稱："
+        },
+        {
+            "type": "code",
+            "content": "```python=\nx = _____('請輸入:')\n_____('輸入的值', x, ___=':')\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：inputprintsep"
         }
     ]
 }

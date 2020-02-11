@@ -4,7 +4,7 @@
         "chapter": "2",
         "name": " 參數"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "###### tags: `easy coding`"
@@ -92,6 +92,28 @@
         {
             "type": "code",
             "content": "```python=\n>>> avg(auau=60, bbbb=90, cake=80, dade=50)\nauau : 60\nbbbb : 90\ncake : 80\ndade : 50\n平均: 70.0\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "輸出結果："
+        },
+        {
+            "type": "text",
+            "content": ":::"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> show_all_args(2, 3, 4, 5, c=4)\n2\n(3, 4, 5)\n3\n{'c': 4}\n```"
+        },
+        {
+            "type": "text",
+            "content": ":::info"
+        },
+        {
+            "type": "text",
+            "content": "完成以下程式碼使輸出結果與題目相同："
         }
     ]
 }
