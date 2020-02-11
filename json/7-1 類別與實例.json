@@ -1,0 +1,231 @@
+{
+    "course_info": {
+        "lesson_number": "7",
+        "chapter": "1",
+        "name": "類別與實例"
+    },
+    "course_block": [
+        {
+            "type": "text",
+            "content": "Python是物件導向程式語言(Object-oriented programming language)，它將物件(Object)視為程式中的基本單元，類別、函式、變數等都是物件，物件導向的概念就是使用「物件」來做設計，將程式拆分成多個物件，可以重複使用他們而不用撰寫相同的程式碼，要修改程式也比較容易。"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>類別</h5>"
+        },
+        {
+            "type": "text",
+            "content": "可以將類別(Class)看作物件的藍圖，凡是物件需要的功能都可以在類別中定義，有了藍圖後就可以依照藍圖生產出具有相似特性的物件，所以當多個物件要使用相同的變數或函式時，就可以將這些變數和函式放入一個類別中，套用類別創建物件，而不用每個物件都畫一次藍圖。"
+        },
+        {
+            "type": "text",
+            "content": "使用class保留字定義類別："
+        },
+        {
+            "type": "code",
+            "content": "```\n#類別名稱通常會將首字母大寫\nclass 類別名稱:\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\nclass MyClass:\n    i = 0\n    \n    def Say_Hello(self):\n        return 'Hello.'\n```"
+        },
+        {
+            "type": "text",
+            "content": "類別可以做兩件事情，一是屬性引用(Attribute references)，類別中的變數與函式就是類別的屬性，二是創建實例(Instantiation)，通過類別創建的物件稱為實例(Instance)。"
+        },
+        {
+            "type": "text",
+            "content": "<h6>屬性引用</h6>"
+        },
+        {
+            "type": "code",
+            "content": "```\n物件.屬性名稱\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> MyClass.i\n0\n>>> MyClass.Say_Hello\n\"<function MyClass.Say_Hello at 0x02D0B588>\"\n```"
+        },
+        {
+            "type": "text",
+            "content": "MyClass.i和MyClass.Say_Hello就是屬性引用，只能引用在類別中有定義的屬性名稱，他們分別傳回一個整數物件和一個函式物件。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> MyClass.i = 5\n>>> MyClass.i\n5\n```"
+        },
+        {
+            "type": "text",
+            "content": "類別屬性也可以被指派，所以MyClass.i和MyClass.Say_Hello的內容可以通過賦值更改。"
+        },
+        {
+            "type": "text",
+            "content": "<h6>創建實例</h6>"
+        },
+        {
+            "type": "code",
+            "content": "```\n#若未加小括號表示將變數指向該類別物件\n變數名稱 = 類別名稱()\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = MyClass() \n```"
+        },
+        {
+            "type": "text",
+            "content": "MyClass()會返回一個該類別的新實例，並將變數a指向該實例物件。"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>實例</h5>"
+        },
+        {
+            "type": "text",
+            "content": "實例也可以進行屬性引用，可以引用類別中的變數與函式，實例引用類別中的函式時會創建出方法(Method)物件，範例如下："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a.i #變數引用\n5\n>>> a.Say_Hello #方法引用\n\"<bound method MyClass.Say_Hello of <__main__.MyClass object at 0x035E3970>>\"\n```"
+        },
+        {
+            "type": "text",
+            "content": "a.Say_Hello是一個方法物件，而不是一個函式物件。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a.Say_Hello() #可以使用實例調用方法\n'Hello.'\n```"
+        },
+        {
+            "type": "text",
+            "content": "這時候你可能會發現，調用方法時並沒有輸入參數，可是我們定義該函式時有設定一個參數self，當調用一個需要參數的函式而沒有輸入任何東西時一定會引發異常，那為什麼可以成功調用呢？"
+        },
+        {
+            "type": "text",
+            "content": "因為實例引用屬性時，會在該實例的類別中尋找引用的屬性名稱。如果這個屬性名稱代表的是一個函式物件，就會創造出一個方法物件，這個方法物件是由該實例物件以及在類別中找到的函式物件包裝起來的。調用方法時，會使用該實例作為第一個參數調用函式，因此a.Say_Hello()語句等同於MyClass.Say_Hello(a)。"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>私有變數、函式</h5>"
+        },
+        {
+            "type": "text",
+            "content": "可以在類別中定義只能在類別內部使用的私有變數與函式，只要在名稱前加上兩個底線「__」就可以將其定義為私有的，私有變數在類別外無法直接引用，需使用「._類別名稱__變數名稱」才能取得。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\nclass MyClass:\n    __x = 0\n    \n    def __addx(self):\n        self.__x += 1 #在類別內可以使用私有變數\n    \n    def add(self):\n        self.__addx() #在類別內可以調用私有方法\n```"
+        },
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = MyClass()\n>>> a.__x #引發屬性錯誤：'MyClass'物件沒有'__x'屬性\nAttributeError: 'MyClass' object has no attribute '__x'\n>>> a.__addx() #引發屬性錯誤：'MyClass'物件沒有'__addx'屬性\nAttributeError: 'MyClass' object has no attribute '__addx'\n>>> a.add()\n>>> a.add()\n>>> a._MyClass__x\n2\n```"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>__init__()</h5>"
+        },
+        {
+            "type": "text",
+            "content": "我們創建的實例其實是一個空的物件，有些類別希望其創建的實例具有某些特定的初始狀態。我們可以使用__init__()這個特殊方法定義創建實例時進行的動作，常用於設定實例物件的屬性，給予初始資料。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\nclass Cake: \n    \n    def __init__(self, name, flavor, filling):\n        self.name = name #名稱\n        self.flavor = flavor #口味\n        self.filling = filling #餡料\n```"
+        },
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = Cake('天使', '香草', '水果')\n>>> b = Cake('波士頓', '草莓', '奶油')\n>>> a.flavor\n'香草'\n>>> b.flavor\n'草莓'\n```"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>類別屬性與實例屬性</h5>"
+        },
+        {
+            "type": "text",
+            "content": "實例一旦創建就是一個獨立的個體，修改或新增某個實例的屬性並不會影響到其他實例，而類別的屬性是創建類別時就存在的，如果我們修改了類別的屬性，其實例都會受到影響，因為類別只有一個，類別屬性也只有一個，所以每一個實例都是引用同一個類別屬性。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\nclass Cake: \n    num = 0 #類別屬性\n    \n    def __init__(self,name, flavor, filling):\n        self.name = name #實例屬性\n        self.flavor = flavor\n        self.filling = filling\n        \n        Cake.num += 1\n```"
+        },
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = Cake('天使','香草','水果')\n>>> b = Cake('波士頓','草莓','奶油')\n>>> a.num\n2\n>>> Cake.num = 5 #修改類別屬性\n>>> a.num\n5\n>>> b.num\n5\n>>> a.num = 10 #實例無法修改類別屬性，該指令會在a實例中建立一個名稱為num的實例屬性\n>>> a.num #會優先引用實例屬性\n10\n```"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>類別方法</h5>"
+        },
+        {
+            "type": "text",
+            "content": "類別中第一個參數為self的函式都是實例方法，只能透過實例調用，我們可以使用「@classmethod」裝飾器使函式成為類別方法，無論以實例或類別調用，類別方法的第一個參數cls都是該類別物件，與實例方法的self參數類似。類別方法的作用對象是類別，不用加上類別名稱就可以使用類別屬性。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\nclass MyClass:\n    i = 0\n    \n    def __init__(self):\n        MyClass.i += 1\n        \n    def subtract(self):\n        MyClass.i -= 1\n        \n    @classmethod\n    def show(cls):\n        print('i:', cls.i)\n```"
+        },
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = MyClass()\n>>> MyClass.show()\ni: 1\n>>> b = MyClass()\n>>> MyClass.show()\ni: 2\n>>> a.subtract()\n>>> MyClass.show()\ni: 1\n```"
+        },
+        {
+            "type": "subtitle",
+            "content": "<h5>靜態方法</h5>"
+        },
+        {
+            "type": "text",
+            "content": "「@staticmethod」使類別中的函式成為靜態方法，不需創建實例就可以直接使用。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\nclass MyClass:\n    @staticmethod\n    def Say_Hello():\n        return 'Hello.'\n```"
+        },
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> MyClass.Say_Hello()\n'Hello.'\n>>> a = MyClass()\n>>> a.Say_Hello() #實例也可以使用靜態方法\n'Hello.'\n```"
+        },
+        {
+            "type": "text",
+            "content": "靜態方法不需要傳入實例物件或類別物件作為第一個參數，如果該方法不會用到任何與類別、實例相關的屬性或方法，那麼就可以將它定義為靜態方法，靜態方法跟普通函式沒有太大區別，只是它放在類別中，僅供該類別使用。"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```\nx: 1\ny: 3\n已設置好座標\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的保留字、方法名稱、參數、裝飾器及屬性名稱："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n_____ Coordinate:\n    def ________(____, x, y):\n        self.x = x\n        self.y = y\n        \n    @______method\n    def confirm():\n        return '已設置好座標'\n    \n    \np = Coordinate(1, 3)\nprint('x:', ___)\nprint('y:', ___)\nprint(p.confirm())\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：class__init__selfstaticp.xp.y"
+        }
+    ]
+}

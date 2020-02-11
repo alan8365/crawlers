@@ -1,0 +1,79 @@
+{
+    "course_info": {
+        "lesson_number": "6",
+        "chapter": "4",
+        "name": "匿名函式"
+    },
+    "course_block": [
+        {
+            "type": "text",
+            "content": "上一章提到的將函式當作參數給其他函式使用，雖然好用但也有一點問題，像是如果用多了就會發現取函式名字非常麻煩或是每次都用def一個新函式也很麻煩。"
+        },
+        {
+            "type": "text",
+            "content": "假設有一個串列裡面存了長短不一的資料，而我們現在需要以資料的長度把它排序，來看看我們可以怎麼做。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = [\n...     (2,5,9,8,7),\n...     (1,6,8),\n...     (6,3),\n...     (4,4,4,4)\n... ]\n>>> def sort_tuple_by_len(tup):\n...     return len(tup)\n>>> a.sort(key=sort_tuple_by_len)\n>>> a\n[(6, 3), (1, 6, 8), (4, 4, 4, 4), (2, 5, 9, 8, 7)]\n```"
+        },
+        {
+            "type": "text",
+            "content": "上面就是讓排序函式用我們傳給它的sort_tuple_by_len當作標準來排序a裡面的東西，像是當排序函式要決定(1,6,8)和(6,3)誰該放在前面時就會把這兩個元組丟進sort_tuple_by_len裡面，再用根據那兩個元組產生的回傳值進行比較後把比較小的那個放在前面。"
+        },
+        {
+            "type": "text",
+            "content": "但是這種方法每次都要先def一個新函式才可以用，所以有人發明了可以快速定義並執行的函式寫法－－lambda。"
+        },
+        {
+            "type": "text",
+            "content": "使用lambda來定義一個函式可以透過以下語法："
+        },
+        {
+            "type": "code",
+            "content": "```\n函式名稱 = lambda 參數們: 函式內容\n```"
+        },
+        {
+            "type": "text",
+            "content": "底下就來用一個回傳兩個數平均值的函式來當作例子。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> avg = lambda a,b: (a+b)/2\n>>> avg(2, 3)\n2.5\n```"
+        },
+        {
+            "type": "text",
+            "content": "上面我們可以看到lambda中不需要return就會直接回傳函式內容，所以其實lambda很侷限只能做一些簡單的操作而不能跑太複雜的條件判斷或迴圈。"
+        },
+        {
+            "type": "text",
+            "content": "接著我們就可以來用lambda重寫第一個例子看看了。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = [\n...     (2,5,9,8,7),\n...     (1,6,8),\n...     (6,3),\n...     (4,4,4,4)\n... ]\n>>> a.sort(key=lambda tup: len(tup))\n>>> a\n[(6, 3), (1, 6, 8), (4, 4, 4, 4), (2, 5, 9, 8, 7)]\n```"
+        },
+        {
+            "type": "text",
+            "content": "從上面的例子可以看到如果我們只需要一個簡單的函式，lambda可以幫我們免去取名的麻煩(所以lambda才翻譯成匿名函式)，也可以讓我們在需要用到函式時再定義它。"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "完成以下程式："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = [\n...     (2,5,9,8,7),\n...     (1,6,8),\n...     (6,3),\n...     (4,4,4,4)\n... ]\n>>> a.sort(key=______ tup: max(___))\n>>> a\n[(4, 4, 4, 4), (6, 3), (1, 6, 8), (2, 5, 9, 8, 7)]\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案:"
+        },
+        {
+            "type": "text",
+            "content": "lambdatup"
+        }
+    ]
+}

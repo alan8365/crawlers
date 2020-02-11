@@ -1,0 +1,147 @@
+{
+    "course_info": {
+        "lesson_number": "7",
+        "chapter": "2",
+        "name": "繼承"
+    },
+    "course_block": [
+        {
+            "type": "text",
+            "content": "繼承的意義(Inheritance)：可以在原有類別的基礎上再建立一個新類別。原有的類別被稱為基礎類別(Base class)，新的類別被稱為衍生類別(Derived class)，衍生類別會自動擁有基礎類別中有定義的變數與函式，也可以在衍生類別中新增。"
+        },
+        {
+            "type": "text",
+            "content": "若修改基礎類別，就會影響其所有的衍生類別，若衍生類別所需要的功能已經在基礎類別中定義過了，就可以使用基礎類別的功能，重複利用已經撰寫好的程式碼。"
+        },
+        {
+            "type": "text",
+            "content": "定義衍生類別："
+        },
+        {
+            "type": "code",
+            "content": "```\nclass 衍生類別名稱(基礎類別名稱):\n```"
+        },
+        {
+            "type": "text",
+            "content": "在衍生類別中使用基礎類別的變數或函式："
+        },
+        {
+            "type": "code",
+            "content": "```\nsuper().基礎類別的類別或函式\n```"
+        },
+        {
+            "type": "text",
+            "content": "以下為類別的繼承範例："
+        },
+        {
+            "type": "code",
+            "content": "```python=\nclass A:\n    def A_method(self, arg):\n        return arg\n        \n    def add(self, num):\n        return num + 1\nclass B(A):\n    def method(self, arg):\n        return super().A_method(arg) #呼叫基礎類別的函式\n```"
+        },
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> b = B()\n>>> b.method(23)\n23\n>>> b.add(23)\n24\n```"
+        },
+        {
+            "type": "text",
+            "content": "也可以同時繼承多個基礎類別："
+        },
+        {
+            "type": "code",
+            "content": "```\nclass 衍生類別名稱(基礎類別名稱1, 基礎類別名稱2...):\n```"
+        },
+        {
+            "type": "text",
+            "content": "使用多重繼承時，如果繼承的多個基礎類別中具有相同名稱的屬性，衍生類別使用該屬性時會先尋找基礎類別1，如果找不到再沿著基礎類別1的基礎類別尋找，如果還是找不到再尋找基礎類別2及其基礎類別，以此類推。"
+        },
+        {
+            "type": "title",
+            "content": "<h4>將類別作為參數</h4>"
+        },
+        {
+            "type": "text",
+            "content": "類別也可以作為參數傳入另一個類別中，成為另一個類別的一部分，跟繼承關係不同，例如頭髮是人類的一部份，可是頭髮不能繼承人類。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\nclass Human:\n    def __init__(self, name):\n        self.name = name\n    def show_hair(self, hair):\n        return self.name+'的頭髮顏色是'+hair.color\n                 \n                 \nclass Hair:\n    def __init__(self, color):\n        self.color = color\n```"
+        },
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> human = Human('Jack')\n>>> hair = Hair('粉紅色')\n>>> human.show_hair(hair)\n'Jack的頭髮顏色是粉紅色'\n```"
+        },
+        {
+            "type": "title",
+            "content": "<h4>多型</h4>"
+        },
+        {
+            "type": "text",
+            "content": "多個類別可以定義相同的函式名稱，並且定義各自不同的功能，透過呼叫不同類別的函式，就可以使用相同的函式名稱，這就稱作多型(Polymorphism)，而這些類別不一定要具有繼承關係。"
+        },
+        {
+            "type": "text",
+            "content": "在以下範例中的三個類別都具有函式method，而B類別繼承自A類別，C類別沒有基礎類別，實作多型的概念："
+        },
+        {
+            "type": "code",
+            "content": "```python=\nclass A:\n    def method(self):\n        pass\n             \n             \nclass B(A):\n    def method(self):\n        return '類別B'\n             \n             \nclass C:\n    def method(self):\n        return '類別C'\n```"
+        },
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> A().method()\n>>> B().method()\n'類別B'\n>>> C().method()\n'類別C'\n```"
+        },
+        {
+            "type": "title",
+            "content": "<h4>覆寫</h4>"
+        },
+        {
+            "type": "text",
+            "content": "可以在衍生類別改寫基礎類別的任何函式，讓衍生類別的函式與基礎類別的相同函式有不同功能，這樣就稱作覆寫(Override)，也可以在覆寫函式時新增參數。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\nclass A:\n    \n    def method(self):\n        return '啾啾啾'\nclass B(A):\n    def method(self):\n        return '嘎嘎嘎'\n```"
+        },
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> a = A()\n>>> a.method()\n'啾啾啾'\n>>> b = B()\n>>> b.method()\n'嘎嘎嘎'\n```"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "執行結果："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> b = B('Cherry')\n>>> b.show()\n'Cherry'\n```"
+        },
+        {
+            "type": "text",
+            "content": "請填入正確的函式名稱："
+        },
+        {
+            "type": "code",
+            "content": "```python=\nclass A:\n    def __init__(self, name):\n        self.name = name\n    \n    def show():\n        return self.name\n        \n        \nclass B___:\n    def __init__(self, arg):\n        _____().__init__(arg)\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：(A)super"
+        }
+    ]
+}

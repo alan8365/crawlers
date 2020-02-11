@@ -65,7 +65,7 @@ class EasyCodingCrawler:
             course_info = {
                 'lesson_number': name[0],
                 'chapter': name[2],
-                'name': name[3:]
+                'name': name[4:]
             }
 
             data = {

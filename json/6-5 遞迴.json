@@ -1,0 +1,95 @@
+{
+    "course_info": {
+        "lesson_number": "6",
+        "chapter": "5",
+        "name": "遞迴"
+    },
+    "course_block": [
+        {
+            "type": "text",
+            "content": "###### tags: `easy coding`"
+        },
+        {
+            "type": "text",
+            "content": "上面幾課介紹完了函式的基本用法，這一課將會介紹在函式內呼叫函式自己的特殊用法－－遞迴。"
+        },
+        {
+            "type": "text",
+            "content": "首先我們來出一個題目叫做費氏數列，費氏數列的定義如下："
+        },
+        {
+            "type": "text",
+            "content": "\\begin{split}"
+        },
+        {
+            "type": "text",
+            "content": "&F_0 = 0 \\\\"
+        },
+        {
+            "type": "text",
+            "content": "&F_1 = 1 \\\\"
+        },
+        {
+            "type": "text",
+            "content": "&F_n = F_{n-1} + F_{n-2} \\\\"
+        },
+        {
+            "type": "text",
+            "content": "\\end{split}"
+        },
+        {
+            "type": "text",
+            "content": "所以我們可以按照上面定義列出費氏數列的第0項到第10項："
+        },
+        {
+            "type": "text",
+            "content": "$$"
+        },
+        {
+            "type": "text",
+            "content": "0,1,1,2,3,5,8,13,21,34,55"
+        },
+        {
+            "type": "text",
+            "content": "$$"
+        },
+        {
+            "type": "text",
+            "content": "而如果我們想要做出一個函式可以列出費氏數列的第n項我們可以很直覺的按照上面的定義直接寫出來。"
+        },
+        {
+            "type": "code",
+            "content": "```python=\ndef Fib(n):\n    if n == 0:\n        return 0\n    if n == 1:\n        return 1\n    return Fib(n-1) + Fib(n-2)\n```"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> ans = [str(Fib(i)) for i in range(11)]\n>>> \",\".join(ans)\n'0,1,1,2,3,5,8,13,21,34,55'\n```"
+        },
+        {
+            "type": "text",
+            "content": "雖然遞迴寫起來很直覺，但是也有一些缺點，像是遞迴很容易浪費記憶體，因為每次用到函式時為了讓函式可以正確地把回傳值傳回用到它的地方電腦都會花一塊記憶體把要回傳的地方存起來。"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "輸出結果："
+        },
+        {
+            "type": "text",
+            "content": ":::"
+        },
+        {
+            "type": "code",
+            "content": "```python=\n>>> ans = [str(power(2, i)) for i in range(11)]\n>>> \",\".join(ans)\n'1,2,4,8,16,32,64,128,256,512,1024'\n```"
+        },
+        {
+            "type": "text",
+            "content": ":::info"
+        },
+        {
+            "type": "text",
+            "content": "完成以下程式碼使輸出結果與題目相同："
+        }
+    ]
+}

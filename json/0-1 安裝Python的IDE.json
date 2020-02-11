@@ -2,9 +2,9 @@
     "course_info": {
         "lesson_number": "0",
         "chapter": "1",
-        "name": " 安裝Python的IDE"
+        "name": "安裝Python的IDE"
     },
-    "all_block": [
+    "course_block": [
         {
             "type": "text",
             "content": "整合開發環境(Integrated Development Environment, 簡稱IDE)，是一種開發工具，通常包含編輯程式碼的文字編輯器和便於撰寫程式的功能，例如：給予不同類型的程式碼不同顏色、錯誤提示、摺疊程式碼、快速完成要輸入的程式碼、快速定位程式碼位置等等。"
@@ -60,6 +60,20 @@
         {
             "type": "text",
             "content": "![](https://i.imgur.com/eHyUxvn.png)"
+        }
+    ],
+    "answer_block": [
+        {
+            "type": "text",
+            "content": "請填入平台教學所用的程式語言名稱："
+        },
+        {
+            "type": "code",
+            "content": "```python=\n______\n```"
+        },
+        {
+            "type": "text",
+            "content": "答案：(1)python(2)Python"
         }
     ]
 }
