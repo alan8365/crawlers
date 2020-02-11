@@ -43,7 +43,7 @@ class EasyCodingCrawler:
 
             raw_text = doc.text
 
-            pattern = r'^:::[\w\W]*:::$'
+            pattern = r':::.*([\w\W]*):::'
             answer_match = re.search(pattern, raw_text, re.MULTILINE)
 
             pattern = r'===|# U*\d+-\d+.*\n'
@@ -53,7 +53,13 @@ class EasyCodingCrawler:
             split_texts = filter_text.split('\n')
             split_texts = list(filter(lambda s: bool(s), split_texts))
 
-            all_block = self.course_type_parser(split_texts)
+            course_block = self.course_type_parser(split_texts)
+
+            answer_text = answer_match.group(1)
+            answer_split_texts = answer_text.split('\n')
+            answer_split_texts = list(filter(lambda s: bool(s), answer_split_texts))
+
+            answer_block = self.course_type_parser(answer_split_texts)
 
             name = name[1:] if name[0] == 'U' else name
             course_info = {
@@ -64,7 +70,8 @@ class EasyCodingCrawler:
 
             data = {
                 'course_info': course_info,
-                'all_block': all_block
+                'course_block': course_block,
+                'answer_block': answer_block
             }
 
             with open(f'json/{name}.json', 'w', encoding='utf8') as f:
