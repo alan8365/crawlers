@@ -1,12 +1,15 @@
 from bs4 import BeautifulSoup
 from requests import get
+from MySQLdb import connect
 
 import re
-import json
 
 
 class EasyCodingCrawler:
     def __init__(self):
+        self.db = connect(host="172.17.135.89", user="easyuser",
+                          passwd="easy1234", db="easy", charset='utf8')
+
         root_url = 'https://hackmd.io/5Elwp94uQf2SvWhn7Oy_gg'
 
         html_text = get(root_url).text
@@ -14,14 +17,14 @@ class EasyCodingCrawler:
         soup = BeautifulSoup(html_text, 'html.parser')
         doc = soup.find('div', id='doc')
 
-        markdown_string = doc.contents[0]
+        markdown_string = doc.text
 
-        patten = r'\[.*\]'
-        temp_headers = re.findall(patten, markdown_string)
+        pattern = r'\[.*\]'
+        temp_headers = re.findall(pattern, markdown_string)
         temp_headers = list(map(lambda s: s[1:-1], temp_headers))
 
-        patten = r'\(.*\)'
-        temp_urls = re.findall(patten, markdown_string)
+        pattern = r'\(.*\)'
+        temp_urls = re.findall(pattern, markdown_string)
         temp_urls = list(map(lambda s: s[1:-1] if 'https' in s else f'https://hackmd.io{s[1:-1]}', temp_urls))
 
         temp_mix = tuple(zip(temp_headers, temp_urls))
@@ -35,8 +38,12 @@ class EasyCodingCrawler:
     def course_parser(self):
         pairs = self.pairs['course']
 
+        all_data = []
         for name, url in pairs:
-            html_text = get(url).text
+            headers = {
+                'user-agent': 'Mozilla/5.0 (Macintosh Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36'}
+
+            html_text = get(url, headers).text
 
             soup = BeautifulSoup(html_text, 'html.parser')
             doc = soup.find('div', id='doc')
@@ -74,8 +81,11 @@ class EasyCodingCrawler:
                 'answer_block': answer_block
             }
 
-            with open(f'json/{name}.json', 'w', encoding='utf8') as f:
-                json.dump(data, f, ensure_ascii=False, indent=4)
+            all_data.append(data)
+            # with open(f'json/{name}.json', 'w', encoding='utf8') as f:
+            #     json.dump(data, f, ensure_ascii=False, indent=4)
+
+        return all_data
 
     @staticmethod
     def course_type_parser(split_texts: list) -> list:
@@ -96,6 +106,15 @@ class EasyCodingCrawler:
                 }
 
                 seek = right_seek
+            elif r'imgur' in temp_str:
+                pattern = r'!\[\]\((.*)\)'
+                match = re.search(pattern, temp_str)
+
+                temp_block = {
+                    'type': 'image',
+                    'content': match.group(1)
+                }
+
             elif r'<table>' in temp_str:
                 right_seek = seek + 1
 
@@ -111,7 +130,7 @@ class EasyCodingCrawler:
             elif r'<h4>' in temp_str:
                 temp_block = {
                     'type': 'title',
-                    'content': temp_str
+                    'content': temp_str[4:-5]
                 }
             elif r'<h5>' in temp_str:
                 temp_block = {
