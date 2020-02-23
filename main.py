@@ -1,4 +1,5 @@
 from EasyCodingCrawler import EasyCodingCrawler
+from NutcCurriculumCrawler import CleanTool
 
 from bs4 import BeautifulSoup
 from requests import get
