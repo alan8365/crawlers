@@ -7,8 +7,8 @@ import re
 
 class EasyCodingCrawler:
     def __init__(self):
-        self.db = connect(host="172.17.135.89", user="easyuser",
-                          passwd="easy1234", db="easy", charset='utf8')
+        # self.db = connect(host="172.17.135.89", user="easyuser",
+        #                   passwd="easy1234", db="easy", charset='utf8')
 
         root_url = 'https://hackmd.io/5Elwp94uQf2SvWhn7Oy_gg'
 
@@ -30,10 +30,23 @@ class EasyCodingCrawler:
         temp_mix = tuple(zip(temp_headers, temp_urls))
 
         self.pairs = {
-            'documents': temp_mix[:8],
+            'documents': temp_mix[:7],
             'course': temp_mix[8:39],
             'assessment': temp_mix[44:-1]
         }
+
+    def document_parser(self):
+        pairs = self.pairs['documents']
+
+        for name, url in pairs:
+            html_text = get(url).text
+
+            soup = BeautifulSoup(html_text, 'html.parser')
+            doc = soup.find('div', id='doc')
+
+            raw_text = doc.text
+
+            pattern = r'<h4>(\d)\.(.*)<\/h4>'
 
     def course_parser(self):
         pairs = self.pairs['course']
